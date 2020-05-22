@@ -5,27 +5,24 @@ const student = {"name":"jey","department":"ECE" , "Section" : "A","age":20}
 
 const jsonStr = JSON.stringify(student);
 
-//console.log('json object to string' , jsonStr);
+console.log('json object to string' , jsonStr);
 
 
 const jsonstring = '{"name":"jey","department":"ECE" , "Section" : "A","age":20}'
 const jsonobj = JSON.parse(jsonstring);
-//console.log('json string to object ' , jsonStr);
+console.log('json string to object ' , jsonStr);
 
 //object array
 const studentarray = [{"name":"jey","department":"ECE" , "Section" : "A","age":20},{"name":"jey1","department":"ECE" , "Section" : "A","age":30} ]
 const jsonarrayStr = JSON.stringify(studentarray);
 
-//console.log('json object array to string' , jsonarrayStr);
+console.log('json object array to string' , jsonarrayStr);
 
 
 const students = file.readFileSync('student.json');
 const jsonsyring = JSON.parse(jsonStr);
 
-console.log(JSON.stringify(students))
-console.log("\n\nnewline\n\n")
-console.log(JSON.parse(students))
-//file.writeFileSync('student1.json', jsonStr);
-//file.appendFileSync('student.json', jsonStr)
 
-//console.log(jsonsyring);
+file.appendFileSync('student.json', jsonStr)
+
+console.log(jsonsyring);
